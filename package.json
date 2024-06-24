@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "@types/node": "^20.4.2",
+    "@xray-app/playwright-junit-reporter": "^0.2.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
+    "expect-playwright": "^0.8.0",
+    "playwright": "^1.44.1",
+    "playwright-core": "^1.44.1",
+    "uuid": "^10.0.0"
+  },
+  "name": "api-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js", 
+    "test:token": "cucumber-js src/test/features/1token.feature",
+    "test:consent": "cucumber-js src/test/features/2concent.feature",
+    "test:3aconsent": "cucumber-js src/test/features/3aaconcent.feature",
+    "test:4accounts": "cucumber-js src/test/features/4accounts.feature",
+    "test:5balance": "cucumber-js src/test/features/5allAccountsBalance.feature",
+    "test:6transactions": "cucumber-js src/test/features/6allAccountsTransactions.feature",
+    "test:7directdebits": "cucumber-js src/test/features/7allAccountsDirectDebits.feature",
+    "test:8standingorders": "cucumber-js src/test/features/8allAccountsStandingOrders.feature",
+    "test:9scheduledpayments": "cucumber-js src/test/features/9accountsScheduledPayments.feature"
+  },
+  "author": "Charan",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@playwright/test": "^1.36.1",
+    "@types/chai": "^4.3.16",
+    "@types/chai-http": "^4.2.0",
+    "chai": "^5.1.1",
+    "chai-http": "^5.0.0",
+    "ts-node": "^10.9.1"
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "default": {
+      "formatOptions": {
+        "snippetInterface": "async-await"
+      },
+      "timeOut": 5000000,
+      "dryRun": false,
+      "paths": [
+        "src/test/features/*.feature"
+      ],
+      "require": [
+        "src/test/steps/*.ts"
+      ],
+      "requireModule": [
+        "ts-node/register"
+      ],
+      "format": [
+        "json:./test-results/results.json",
+        "junit:./test-results/results.xml"
+      ],
+      "publishQuiet": false,
+      "reporter": [
+        [
+          "cucumberjs-json",
+          {
+            "metadata": {
+              "browser": "Playwright"
+            },
+            "output": "./xray-report.xml"
+          }
+        ]
+      ]
+    }
+  }
+  
