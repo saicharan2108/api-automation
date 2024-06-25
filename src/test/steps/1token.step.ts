@@ -7,6 +7,8 @@ setDefaultTimeout(500000);
 
 let browser: Browser;
 let context: BrowserContext;
+const MAX_RETRIES = 5;  // Maximum number of retries
+let retryCount = 0;
 
 // Initialize browser before all scenarios
 BeforeAll(async () => {
@@ -19,6 +21,8 @@ AfterAll(async () => {
   await context.close();
   await browser.close();
 });
+
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 const fetchAccessToken = async () => {
   const requestBody = {
@@ -60,9 +64,15 @@ const fetchAccessToken = async () => {
     setGeneratedToken(accessToken);
 
   } catch (error) {
-    fetchAccessToken()
-    // console.error('Error fetching access token:', error);
-    // throw error;
+    console.error('Error fetching access token:', error);
+    if (retryCount < MAX_RETRIES) {
+      retryCount++;
+      console.log(`Retrying... Attempt ${retryCount}`);
+      await delay(2000); // Delay before retrying (2 seconds in this example)
+      await fetchAccessToken(); // Retry fetching access token
+    } else {
+      throw new Error('Maximum retry attempts exceeded');
+    }
   }
 };
 
@@ -71,15 +81,15 @@ Given('I have API1 endpoint details', async () => {
 });
 
 When('I send a POST request to retrieve the access token', async () => {
+  retryCount = 0; // Reset retry count before attempting to fetch access token
   await fetchAccessToken();
 });
 
 Then('the access_token should be stored in environment variables', async () => {
   const storedToken = process.env.accessToken;
-  // console.log(storedToken);
   expect(storedToken).toBeDefined();
   if (storedToken) {
     expect(storedToken.length).toBeGreaterThan(0);
   }
-  await console.log("1 Token generation test passed")
+  console.log("Token generation test passed");
 });

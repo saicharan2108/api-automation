@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<testsuite failures="0" skipped="0" name="cucumber-js" time="50.041682685" tests="9">
+  <testcase classname="API1 Testing" name="Retrieve and store access token from API1" time="1.5003829990000002">
+    <system-out><![CDATA[Given I have API1 endpoint details........................................passed
+When I send a POST request to retrieve the access token...................passed
+Then the access_token should be stored in environment variables...........passed]]></system-out>
+  </testcase>
+  <testcase classname="Consent API Testing" name="Navigate to URL, login, select items, confirm, and verify consent details" time="22.364006498000002">
+    <system-out><![CDATA[Given I have the generated access token...................................passed
+When I send a POST request to the Consent API.............................passed
+And I navigate to the URL from the response...............................passed
+And I log in and select items.............................................passed
+Then I should see a success message.......................................passed
+And I should verify the consent details...................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Consent API Testing" name="Create account aggregation consent and verify details" time="20.266754997">
+    <system-out><![CDATA[Given I have the generated access token for account aggregation...........passed
+When I send a POST request to create an account aggregation consent.......passed
+Then I should receive a valid consent URL.................................passed
+When I navigate to the consent URL........................................passed
+And I log in and select items for account aggregation.....................passed
+Then I should verify the consent details for account aggregation..........passed]]></system-out>
+  </testcase>
+  <testcase classname="Account API" name="Verify account details from API response" time="0.399570298">
+    <system-out><![CDATA[Given I have the necessary API details....................................passed
+When I send a request to the account API..................................passed
+Then I should receive a successful response...............................passed
+And the response payload should contain the account details...............passed]]></system-out>
+  </testcase>
+  <testcase classname="All Accounts Balance" name="Verify all accounts balance details from API response" time="0.495170199">
+    <system-out><![CDATA[Given I have the necessary API details for all accounts balance...........passed
+When I send a request to the all accounts balance API.....................passed
+Then I should receive a successful response for all accounts balance......passed
+And the response payload should contain the account balance details.......passed]]></system-out>
+  </testcase>
+  <testcase classname="All Accounts Transactions" name="Verify all accounts transactions details from API response" time="3.2112885">
+    <system-out><![CDATA[Given I have the necessary API details for all accounts transactions......passed
+When I send a request to the all accounts transactions API................passed
+Then I should receive a successful response for all accounts transactio...passed
+And the response payload should contain the account transactions detail...passed]]></system-out>
+  </testcase>
+  <testcase classname="All Accounts Direct Debits" name="Retrieve all direct debits for all accounts" time="0.587862498">
+    <system-out><![CDATA[Given I have the necessary API details for direct debits..................passed
+When I send a request to the all accounts direct debits API...............passed
+Then I should receive a successful direct debits response.................passed
+And the response payload should contain the direct debits details.........passed]]></system-out>
+  </testcase>
+  <testcase classname="All Accounts Standing Orders" name="Retrieve all accounts standing orders" time="0.615465998">
+    <system-out><![CDATA[Given I have the necessary API details for standing orders................passed
+When I send a request to the all accounts standing orders API.............passed
+Then I should receive a successful response for all accounts standing o...passed
+And the response payload should contain the account standing order deta...passed]]></system-out>
+  </testcase>
+  <testcase classname="Accounts Scheduled Payments API" name="Verify accounts scheduled payments details from API response" time="0.601180698">
+    <system-out><![CDATA[Given I have the necessary API details for scheduled payments.............passed
+When I send a request to the accounts scheduled payments API..............passed
+Then I should receive a successful response for scheduled payments........passed
+And the response payload should contain the scheduled payments details....passed]]></system-out>
+  </testcase>
+</testsuite>

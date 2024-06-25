@@ -1,0 +1,707 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "api1-testing;retrieve-and-store-access-token-from-api1",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Retrieve and store access token from API1",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have API1 endpoint details",
+            "match": {
+              "location": "src\\test\\steps\\1token.step.ts:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1016099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a POST request to retrieve the access token",
+            "match": {
+              "location": "src\\test\\steps\\1token.step.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1488228300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the access_token should be stored in environment variables",
+            "match": {
+              "location": "src\\test\\steps\\1token.step.ts:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11138600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "api1-testing",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "API1 Testing",
+    "tags": [],
+    "uri": "src\\test\\features\\1token.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "consent-api-testing;navigate-to-url,-login,-select-items,-confirm,-and-verify-consent-details",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Navigate to URL, login, select items, confirm, and verify consent details",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have the generated access token",
+            "match": {
+              "location": "src\\test\\steps\\2concent.step.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3312299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a POST request to the Consent API",
+            "match": {
+              "location": "src\\test\\steps\\2concent.step.ts:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1161324200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I navigate to the URL from the response",
+            "match": {
+              "location": "src\\test\\steps\\2concent.step.ts:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6136935699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I log in and select items",
+            "match": {
+              "location": "src\\test\\steps\\2concent.step.ts:146"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13810139600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should see a success message",
+            "match": {
+              "location": "src\\test\\steps\\2concent.step.ts:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64334700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I should verify the consent details",
+            "match": {
+              "location": "src\\test\\steps\\2concent.step.ts:171"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1187960000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "consent-api-testing",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Consent API Testing",
+    "tags": [],
+    "uri": "src\\test\\features\\2concent.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "consent-api-testing;create-account-aggregation-consent-and-verify-details",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Create account aggregation consent and verify details",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I have the generated access token for account aggregation",
+            "match": {
+              "location": "src\\test\\steps\\3aaconcent.step.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 938499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I send a POST request to create an account aggregation consent",
+            "match": {
+              "location": "src\\test\\steps\\3aaconcent.step.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1032555000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should receive a valid consent URL",
+            "match": {
+              "location": "src\\test\\steps\\3aaconcent.step.ts:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3228999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I navigate to the consent URL",
+            "match": {
+              "location": "src\\test\\steps\\3aaconcent.step.ts:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7814128699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I log in and select items for account aggregation",
+            "match": {
+              "location": "src\\test\\steps\\3aaconcent.step.ts:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6606662900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should verify the consent details for account aggregation",
+            "match": {
+              "location": "src\\test\\steps\\3aaconcent.step.ts:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4809240900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "consent-api-testing",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Consent API Testing",
+    "tags": [],
+    "uri": "src\\test\\features\\3aaconcent.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "account-api;verify-account-details-from-api-response",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify account details from API response",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have the necessary API details",
+            "match": {
+              "location": "src\\test\\steps\\4accounts.step.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 928399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a request to the account API",
+            "match": {
+              "location": "src\\test\\steps\\4accounts.step.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 394379999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should receive a successful response",
+            "match": {
+              "location": "src\\test\\steps\\4accounts.step.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 856900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the response payload should contain the account details",
+            "match": {
+              "location": "src\\test\\steps\\4accounts.step.ts:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3405000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "account-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Account API",
+    "tags": [],
+    "uri": "src\\test\\features\\4accounts.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "all-accounts-balance;verify-all-accounts-balance-details-from-api-response",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify all accounts balance details from API response",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have the necessary API details for all accounts balance",
+            "match": {
+              "location": "src\\test\\steps\\5allAccountsaBalance.step.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 663500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a request to the all accounts balance API",
+            "match": {
+              "location": "src\\test\\steps\\5allAccountsaBalance.step.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 478083400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should receive a successful response for all accounts balance",
+            "match": {
+              "location": "src\\test\\steps\\5allAccountsaBalance.step.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1705599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the response payload should contain the account balance details",
+            "match": {
+              "location": "src\\test\\steps\\5allAccountsaBalance.step.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14717700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "all-accounts-balance",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "All Accounts Balance",
+    "tags": [],
+    "uri": "src\\test\\features\\5allAccountsBalance.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "all-accounts-transactions;verify-all-accounts-transactions-details-from-api-response",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify all accounts transactions details from API response",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have the necessary API details for all accounts transactions",
+            "match": {
+              "location": "src\\test\\steps\\6allAccountsTransactions.step.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 866200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a request to the all accounts transactions API",
+            "match": {
+              "location": "src\\test\\steps\\6allAccountsTransactions.step.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3203474500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should receive a successful response for all accounts transactions",
+            "match": {
+              "location": "src\\test\\steps\\6allAccountsTransactions.step.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1751800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the response payload should contain the account transactions details",
+            "match": {
+              "location": "src\\test\\steps\\6allAccountsTransactions.step.ts:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5196000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "all-accounts-transactions",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "All Accounts Transactions",
+    "tags": [],
+    "uri": "src\\test\\features\\6allAccountsTransactions.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "all-accounts-direct-debits;retrieve-all-direct-debits-for-all-accounts",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Retrieve all direct debits for all accounts",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have the necessary API details for direct debits",
+            "match": {
+              "location": "src\\test\\steps\\7allAccountsDirectDebits.step.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 858499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a request to the all accounts direct debits API",
+            "match": {
+              "location": "src\\test\\steps\\7allAccountsDirectDebits.step.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 578715200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should receive a successful direct debits response",
+            "match": {
+              "location": "src\\test\\steps\\7allAccountsDirectDebits.step.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 999700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the response payload should contain the direct debits details",
+            "match": {
+              "location": "src\\test\\steps\\7allAccountsDirectDebits.step.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7289099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "all-accounts-direct-debits",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "All Accounts Direct Debits",
+    "tags": [],
+    "uri": "src\\test\\features\\7allAccountsDirectDebits.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "all-accounts-standing-orders;retrieve-all-accounts-standing-orders",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Retrieve all accounts standing orders",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have the necessary API details for standing orders",
+            "match": {
+              "location": "src\\test\\steps\\8allAccountsStandingOrders.step.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 607400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a request to the all accounts standing orders API",
+            "match": {
+              "location": "src\\test\\steps\\8allAccountsStandingOrders.step.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 603011999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should receive a successful response for all accounts standing orders",
+            "match": {
+              "location": "src\\test\\steps\\8allAccountsStandingOrders.step.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3728100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the response payload should contain the account standing order details",
+            "match": {
+              "location": "src\\test\\steps\\8allAccountsStandingOrders.step.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8118499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "all-accounts-standing-orders",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "All Accounts Standing Orders",
+    "tags": [],
+    "uri": "src\\test\\features\\8allAccountsStandingOrders.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "accounts-scheduled-payments-api;verify-accounts-scheduled-payments-details-from-api-response",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify accounts scheduled payments details from API response",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have the necessary API details for scheduled payments",
+            "match": {
+              "location": "src\\test\\steps\\9accountsScheduledPayments.step.ts:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1194800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a request to the accounts scheduled payments API",
+            "match": {
+              "location": "src\\test\\steps\\9accountsScheduledPayments.step.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 595093400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should receive a successful response for scheduled payments",
+            "match": {
+              "location": "src\\test\\steps\\9accountsScheduledPayments.step.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 993799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the response payload should contain the scheduled payments details",
+            "match": {
+              "location": "src\\test\\steps\\9accountsScheduledPayments.step.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3898699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "accounts-scheduled-payments-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Accounts Scheduled Payments API",
+    "tags": [],
+    "uri": "src\\test\\features\\9accountsScheduledPayments.feature"
+  }
+]

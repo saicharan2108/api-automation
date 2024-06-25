@@ -3,6 +3,7 @@
     "@types/node": "^20.4.2",
     "@xray-app/playwright-junit-reporter": "^0.2.0",
     "axios": "^1.7.2",
+    "cucumber-html-reporter": "^7.1.1",
     "dotenv": "^16.4.5",
     "env": "^0.0.2",
     "expect-playwright": "^0.8.0",
@@ -14,7 +15,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js", 
+    "test": "cucumber-js",
     "test:token": "cucumber-js src/test/features/1token.feature",
     "test:consent": "cucumber-js src/test/features/2concent.feature",
     "test:3aconsent": "cucumber-js src/test/features/3aaconcent.feature",
@@ -23,7 +24,9 @@
     "test:6transactions": "cucumber-js src/test/features/6allAccountsTransactions.feature",
     "test:7directdebits": "cucumber-js src/test/features/7allAccountsDirectDebits.feature",
     "test:8standingorders": "cucumber-js src/test/features/8allAccountsStandingOrders.feature",
-    "test:9scheduledpayments": "cucumber-js src/test/features/9accountsScheduledPayments.feature"
+    "test:9scheduledpayments": "cucumber-js src/test/features/9accountsScheduledPayments.feature",
+    "generate-report": "node generate-html-report.js",
+    "test:ci": "npm run test && npm run generate-report"
   },
   "author": "Charan",
   "license": "ISC",
